@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: "Inter", sans-serif;
+    }
+}
+
+.angin-aman {
+    background-image: url("/images/wind/angin-aman.png");
+}
+
+.angin-siaga {
+    background-image: url("/images/wind/angin-siaga.png");
+}
+
+.angin-bahaya {
+    background-image: url("/images/wind/angin-bahaya.png");
+}
+
+.air-aman {
+    background-image: url("/images/water/air-aman.png");
+}
+
+.air-siaga {
+    background-image: url("/images/water/air-siaga.png");
+}
+
+.air-bahaya {
+    background-image: url("/images/water/air-bahaya.png");
+}
+
+.angin-aman, .angin-siaga, .angin-bahaya, .air-aman, .air-siaga, .air-bahaya {
+    width: 210px;
+    height: 160px;
+    background-position: center;
+    background-repeat: no-repeat;
+    @apply bg-contain 
+}
+
+#windImage, #waterImage {
+  animation: slide 5s linear infinite;
+}
+
+.ping {
+  display: block;
+  animation:pulse 1500ms infinite;
+}
+
+@keyframes pulse{
+  0%{
+    box-shadow:#0ea5e9 0 0 0 0;
+  }
+  75%{
+    box-shadow:#f0f9ff 0 0 0 10px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(5%);
+  }
+  75% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .angin-aman, .angin-siaga, .angin-bahaya, .air-aman, .air-siaga, .air-bahaya {
+    width: 180px;
+    height: 130px;
+  }
+}

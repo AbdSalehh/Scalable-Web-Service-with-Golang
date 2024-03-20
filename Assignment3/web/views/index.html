@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/output.css" />
+    <title>Status Page</title>
+  </head>
+  <body>
+    <div
+        class="flex flex-col items-center py-6 md:pt-0 h-fit md:h-screen w-full md:w-screen justify-center px-5 xsm:px-10 gap-5"
+    >
+        <div
+            class="py-2 px-6 rounded-md bg-white border border-slate-100 ping text-center"
+        >Pembaruan data water and wind setiap <span class="font-bold">15 detik</span></div>
+        <div class="w-full h-[85%] flex flex-col md:flex-row gap-4 md:gap-7 lg:gap-10 justify-center items-center">
+            <div class="w-full md:w-1/2 h-fit md:h-full relative">
+                <div
+                    class="w-60 h-60 md:w-72 md:h-72 rounded-full bg-amber-300 left-0 top-0 absolute"
+                ></div>
+                <div
+                    class="w-full h-full isolate bg-white/0 shadow-lg rounded-lg flex flex-col justify-center items-center gap-4 backdrop-blur-3xl border-2 border-slate-100 py-4 md:py-0"
+                >
+                    <div
+                        class="w-[70%] xsm:w-1/2 py-2 rounded-full flex items-center justify-center bg-white border border-slate-200"
+                    >
+                        <div class="font-medium text-slate-900 text-base xsm:text-lg">
+                            Angin
+                        </div>
+                    </div>
+                    <div id="windImage" class="angin-aman"/></div>
+                    <div
+                        class="flex flex-col gap-5 relative justify-center text-center w-full items-center mb-2"
+                    >
+                        <div class="flex h-fit items-start">
+                            <div id="windNumber"
+                                class="text-6xl lg:text-8xl font-semibold text-slate-800"
+                            >
+                                31
+                            </div>
+                            <div class="text-3xl text-slate-800">m/s</div>
+                        </div>
+                        <p id="windStatus" class="text-2xl text-slate-800">Aman</p>
+                        <div
+                            class="w-[30%] h-1 bg-slate-800 rounded-full bottom-0 mx-auto"
+                        ></div>
+                    </div>
+                    <div id="windDesc"
+                        class="w-[80%] sm:w-1/2 text-center text-slate-800 text-sm leading-7"
+                    >
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Voluptatum iste eveniet
+                    </div>
+                    <div
+                        class="w-1/2 text-center text-slate-800 text-3xl font-semibold"
+                    >
+                        Jakarta
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 py-4 md:py-0 h-fit md:h-full relative">
+                <div
+                    class="w-60 h-60 md:w-72 md:h-72 rounded-full bg-sky-400 right-0 bottom-5 md:bottom-0 absolute"
+                ></div>
+                <div
+                    class="w-full h-full isolate bg-white/0 shadow-lg rounded-lg flex flex-col justify-center items-center gap-4 backdrop-blur-3xl border-2 border-slate-100 py-4 md:py-0"
+                >
+                    <div 
+                        class="w-[70%] xsm:w-1/2 py-2 rounded-full flex items-center justify-center bg-white border border-slate-200"
+                    >
+                        <div class="font-medium text-slate-900 text-base xsm:text-lg">
+                            Air
+                        </div>
+                    </div>
+                    <div id="waterImage" class="air-bahaya"/></div>
+                    <div
+                        class="flex flex-col gap-5 relative justify-center text-center w-full items-center mb-2"
+                    >
+                        <div class="flex h-fit items-start">
+                            <div id="waterNumber"
+                                class="text-6xl lg:text-8xl font-semibold text-slate-800"
+                            >
+                                57
+                            </div>
+                            <div class="text-3xl text-slate-800">m</div>
+                        </div>
+                        <p id="waterStatus" class="text-2xl text-slate-800">Aman</p>
+                        <div
+                            class="w-[30%] h-1 bg-slate-800 rounded-full bottom-0 mx-auto"
+                        ></div>
+                    </div>
+                    <div id="waterDesc"
+                        class="w-[80%] sm:w-1/2 text-center text-slate-800 text-sm leading-7"
+                    >
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Voluptatum iste eveniet
+                    </div>
+                    <div
+                        class="w-1/2 text-center text-slate-800 text-3xl font-semibold"
+                    >
+                        Jakarta
+                    </div>
+                </div>
+                <img src="/images/water/air-aman.png" alt="images" class="absolute bottom-0 right-0 w-1 h-1 -z-50">
+                <img src="/images/water/air-siaga.png" alt="images" class="absolute bottom-0 right-0 w-1 h-1 -z-50">
+                <img src="/images/water/air-bahaya.png" alt="images" class="absolute bottom-0 right-0 w-1 h-1 -z-50">
+                <img src="/images/wind/angin-aman.png" alt="images" class="absolute bottom-0 right-0 w-1 h-1 -z-50">
+                <img src="/images/wind/angin-siaga.png" alt="images" class="absolute bottom-0 right-0 w-1 h-1 -z-50">
+                <img src="/images/wind/angin-bahaya.png" alt="images" class="absolute bottom-0 right-0 w-1 h-1 -z-50">
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/script.js"></script>
+  </body>
+</html>
